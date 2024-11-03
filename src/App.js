@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Header from './components/Header';
 import LandingPage from './components/LandingPage';
 import ProductList from './components/ProductList';
@@ -11,14 +12,15 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route path="/products" component={ProductList} />
-          <Route path="/cart" component={Cart} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/products" element={<ProductList />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
       </div>
     </Router>
   );
 }
 
 export default App;
+

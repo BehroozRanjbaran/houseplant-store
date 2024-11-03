@@ -1,6 +1,6 @@
 .landing-page {
-    background-image: url('/path-to-your-background-image.jpg');
-    background-size: cover;
+    background-image: linear-gradient(to right, #f0f0f0, #c3e47c);
+    background-size:  cover;
     height: 100vh;
     display: flex;
     flex-direction: column;
